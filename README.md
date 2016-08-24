@@ -20,6 +20,7 @@ http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#obtaining-bowtie-2
 - Get input data ready
 
 - WGS testing dataset
+    - PRJNA188481: http://www.ncbi.nlm.nih.gov/bioproject/188481
     - [if not in fastq format, the data need to be converted.]
 - RNASeq testing dataset
 
