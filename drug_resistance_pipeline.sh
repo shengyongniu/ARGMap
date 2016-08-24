@@ -83,8 +83,8 @@ then
  echo "####Mapping of Metagenome Data####"
 
  echo "Mapping of Homolog Model Data"
- cd ${Bowtie2_dir}
- ./bowtie2 -x  ${CARD_dir}/nucleotide_fasta.ProteinHomologModel  -1 ${WGS_dir}/${WGS_First} -2 ${WGS_dir}/${WGS_Second}  -S ${output_dir}/${WGS_outputName}.sam
+# cd ${Bowtie2_dir}
+ ${Bowtie2_dir}/bowtie2 -x  ${CARD_dir}/nucleotide_fasta.ProteinHomologModel  -1 ${WGS_dir}/${WGS_First} -2 ${WGS_dir}/${WGS_Second}  -S ${output_dir}/${WGS_outputName}.sam
  
  echo "Converting mapping results from sam format to bam format..." 
  cd ${Samtools_dir}
@@ -119,8 +119,8 @@ then
 echo "####Mapping of Metatranscriptome Data####"
 
 echo "Use Bowtie2 to map RNAseq data with Hololog Model Data"
-cd ${Bowtie2_dir}
-./bowtie2 -x  ${CARD_dir}/nucleotide_fasta.ProteinHomologModel  -1 ${RNAseq_dir}/${RNAseq_First} -2 ${RNAseq_dir}/${RNAseq_Second}  -S ${output_dir}/${RNA_outputName}.sam
+#cd ${Bowtie2_dir}
+${Bowtie2_dir}/bowtie2 -x  ${CARD_dir}/nucleotide_fasta.ProteinHomologModel  -1 ${RNAseq_dir}/${RNAseq_First} -2 ${RNAseq_dir}/${RNAseq_Second}  -S ${output_dir}/${RNA_outputName}.sam
 
 echo "Converting mapping results from sam format to bam format..."
 cd ${Samtools_dir}
