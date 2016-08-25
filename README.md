@@ -1,6 +1,6 @@
 # ARGMap
 Antibiotic Resistant Gene metagenomics and metatranscriptomics MAPping pipeline  
-Profiling Antibiotic Resistant Gene Expression with metagenome and metatranscriptome data (for any habitats)
+Profiling Antibiotic Resistant Gene Expression with metagenome and metatranscriptome data (for microbiome data from any habitats)
 
 WGS and RNAseq mapping testing Tutorial
 
