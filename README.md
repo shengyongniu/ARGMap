@@ -21,7 +21,7 @@ Installation of Samtools 1.3.1
 
 2.  WGS and RNAseq Input Testing Dataset (Paired-End)
 
-  **Please make sure both of your input datasets are in fastq format!
+  **Please make sure both of your input datasets are in fastq format!**
   
   -Our WGS and RNAseq testing dataset are orginally from NCBI SRA experimental data as following link: 
   
