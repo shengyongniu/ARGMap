@@ -2,31 +2,46 @@
 Antibiotic Resistant Gene metagenomics and metatranscriptomics MAPping pipeline  
 Profiling Antibiotic Resistant Gene Expression with metagenome and metatranscriptome data (for any habitats)
 
-WGS and RNAseq mapping testing tutorial
+##WGS and RNAseq mapping testing Tutorial
 
-- Installation of Bowtie2
--  https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.2.9/
+1. Installation of Bowtie2, Bedtools and Samtools 
 
-http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#obtaining-bowtie-2
+Installation of Bowtie2 2.2.1
+  
+  Please check: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#obtaining-bowtie-2
+  
 
-- Installation of Bedtools
-- http://bedtools.readthedocs.io/en/latest/content/installation.html
+Installation of Bedtools 2.25.0
 
-- Installation of Samtools
-- http://www.htslib.org/download/
+  Please check: http://bedtools.readthedocs.io/en/latest/content/installation.html
 
-- Build up CARD v.1.1.0 reference database
-- default download from https://card.mcmaster.ca/download/0/broadstreet-v1.1.0.tar.gz
-- Get input data ready
+Installation of Samtools 1.3.1
 
-- WGS testing dataset
-    - PRJNA188481: http://www.ncbi.nlm.nih.gov/bioproject/188481
-    - [if not in fastq format, the data need to be converted.]
-- RNASeq testing dataset
+  Please check: http://www.htslib.org/download/
 
-    - [if not in fastq format, the data need to be converted.]
-- Config file editing
+2.  WGS and RNAseq Input Testing Dataset (Paired-End)
+
+  **Please make sure both of your input datasets are in fastq format!
+  
+  -Our WGS and RNAseq testing dataset are orginally from NCBI SRA experimental data as following link: 
+  
+  WGS: https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?run=SRR769532
+  
+  RNAseq: https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?run=SRR769427
+  
+  -We have already transformed them into fastq format files and they only have mapped part of data for storage and time saving purpose.
+  
+  -WGS and RNAseq testing datasets are located in  "ARGMap/example/WGS/" and "ARGMap/example/RNAseq/" by default. 
+  
+ 
+3. Config file editing
 
 - Execution of pipeline shell script
 
 - Results Interpretation
+- 
+
+2. 
+- Build up CARD v.1.1.0 reference database
+- default download from https://card.mcmaster.ca/download/0/broadstreet-v1.1.0.tar.gz
+- Get input data ready
