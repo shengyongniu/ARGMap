@@ -2,7 +2,7 @@
 Antibiotic Resistant Gene metagenomics and metatranscriptomics MAPping pipeline  
 Profiling Antibiotic Resistant Gene Expression with metagenome and metatranscriptome data (for any habitats)
 
-##WGS and RNAseq mapping testing Tutorial
+WGS and RNAseq mapping testing Tutorial
 
 1. Installation of Bowtie2, Bedtools and Samtools 
 
@@ -17,8 +17,14 @@ Profiling Antibiotic Resistant Gene Expression with metagenome and metatranscrip
   Installation of Samtools 1.3.1
 
   Please check: http://www.htslib.org/download/
+  
 
-2.  WGS and RNAseq Input Testing Dataset (Paired-End)
+2. CARD Database (The Comprehensive Antibiotic Resistance Database)
+  
+  CARD v.1.1.0 reference database will be built up in "${sourcedir}/CARD/" by default
+
+
+3.  WGS and RNAseq Input Testing Dataset (Paired-End)
 
   **Please make sure both of your input datasets are in fastq format!**
   
@@ -30,47 +36,21 @@ Profiling Antibiotic Resistant Gene Expression with metagenome and metatranscrip
   
   -We have already transformed them into fastq format files and they only have mapped part of data for storage and time saving purpose.
   
-  -WGS and RNAseq testing datasets are located in  "ARGMap/example/WGS/" and "ARGMap/example/RNAseq/" by default. 
+  -**WGS and RNAseq testing datasets are located in  "ARGMap/example/WGS/" and "ARGMap/example/RNAseq/" by default. **
   
- 
-3. Config File "pipeline_config.sh" Editing
-
-  **Please edit the pathway in config file!**
-  # directory where source scripts are located
-sourcedir="/g/bork/zeller/for_simon/review/ARGMap"
-# directory where CARD reference database is located
-CARD_dir="${sourcedir}/CARD/"
-CARD_fasta="${CARD_dir}/nucleotide_fasta_protein_homolog_model.fasta"
 
 
-##Please add hashtag in the front of "WGS_dir" if you don't run WGS pipeline
-WGS_dir="/g/bork/zeller/for_simon/review/ARGMap/example/WGS"
-WGS_First="WGS.end1.fq.gz"
-WGS_Second="WGS.end2.fq.gz"
-##Please add hashtag in the front of "RNAseq_dir" if you don't run RNAseq pipeline
-RNAseq_dir="/g/bork/zeller/for_simon/review/ARGMap/example/RNAseq"
-RNAseq_First="RNAseq.end1.fq.gz"
-RNAseq_Second="RNAseq.end2.fq.gz"
+4. Config File "pipeline_config.sh" Editing
 
-# directory where executable tool files are located
-Bowtie2_dir="/g/bork/zeller/for_simon/review/bowtie2-2.2.1"
-Bedtools_dir="/g/bork/zeller/for_simon/review/bedtools/bedtools2/bin"
-Samtools_dir="/g/bork/zeller/for_simon/review/samtools-1.3.1"
+  **Please edit the pathway in config file as its instruction!**
+  
+5. Execution of pipeline shell script
 
-# output directory where all outputs will be stored
-output_dir="${sourcedir}/output/"
-WGS_outputName="test2.drugRes.CRNd00001"
-RNASeq_outputName="test2.drugRes.CRNr00001"
+  Please access to your source directory and input "./drug_resistance_pipeline.sh" then it will source the config file and execute pipeline job. 
+
+6. Results Interpretation
+  
+  In output file directory, you could find .sam, .bam and .coverage file for WGS and RNAseq files. In our .coverage file, the columns are .......... 
 
 
 
-
-- Execution of pipeline shell script
-
-- Results Interpretation
-- 
-
-2. 
-- Build up CARD v.1.1.0 reference database
-- default download from https://card.mcmaster.ca/download/0/broadstreet-v1.1.0.tar.gz
-- Get input data ready
