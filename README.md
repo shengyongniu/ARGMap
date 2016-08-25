@@ -36,7 +36,7 @@ WGS and RNAseq mapping testing Tutorial
   
   -We have already transformed them into fastq format files and they only have mapped part of data for storage and time saving purpose.
   
-  -**WGS and RNAseq testing datasets are located in  "ARGMap/example/WGS/" and "ARGMap/example/RNAseq/" by default. **
+  **WGS and RNAseq testing datasets are located in  "ARGMap/example/WGS/" and "ARGMap/example/RNAseq/" by default. **
   
 
 
