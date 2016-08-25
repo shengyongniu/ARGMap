@@ -121,8 +121,7 @@ then
  ${Bowtie2_dir}/bowtie2 -x  ${CARD_dir}/nucleotide_fasta.ProteinHomologModel  -1 ${WGS_dir}/${WGS_First} -2 ${WGS_dir}/${WGS_Second}  -S ${output_dir}/${WGS_outputName}.sam
  
  echo "Converting mapping results from sam format to bam format..." 
- cd ${Samtools_dir}
- ./samtools view -bS ${output_dir}/${WGS_outputName}.sam > ${output_dir}/${WGS_outputName}.bam
+ ${Samtools_dir}/samtools view -bS ${output_dir}/${WGS_outputName}.sam > ${output_dir}/${WGS_outputName}.bam
 
 
  echo "Getting bed file for gene sequences..."
@@ -130,8 +129,7 @@ then
  awk '/^>/ {if (seqlen){print "0\t"seqlen-1}; gsub(/^>/,"",$1);printf("%s\t",$1) ;seqlen=0;next; } { seqlen += length($0)}END{print "0\t"seqlen-1}' ${CARD_fasta}  > ${CARD_fasta}.bed
 
  echo "Using bedtools coverage to get read count and coverage over each gene..."
- cd ${Bedtools_dir}
- ./bedtools coverage -abam  ${output_dir}/${WGS_outputName}.bam -b   ${CARD_fasta}.bed > ${output_dir}/${WGS_outputName}.coverage
+ ${Bedtools_dir}/bedtools coverage -abam  ${output_dir}/${WGS_outputName}.bam -b   ${CARD_fasta}.bed > ${output_dir}/${WGS_outputName}.coverage
  
  echo "It's the end of WGS Mapping Session :) "
 
@@ -156,8 +154,7 @@ echo "Use Bowtie2 to map RNAseq data with Hololog Model Data"
 ${Bowtie2_dir}/bowtie2 -x  ${CARD_dir}/nucleotide_fasta.ProteinHomologModel  -1 ${RNAseq_dir}/${RNAseq_First} -2 ${RNAseq_dir}/${RNAseq_Second}  -S ${output_dir}/${RNA_outputName}.sam
 
 echo "Converting mapping results from sam format to bam format..."
-cd ${Samtools_dir}
-./samtools view -bS ${output_dir}/${RNA_outputName}.sam > ${output_dir}/${RNA_outputName}.bam
+${Samtools_dir}/samtools view -bS ${output_dir}/${RNA_outputName}.sam > ${output_dir}/${RNA_outputName}.bam
 
 
 echo "Getting bed file for gene sequences..."
@@ -166,8 +163,7 @@ awk '/^>/ {if (seqlen){print "0\t"seqlen-1}; gsub(/^>/,"",$1);printf("%s\t",$1) 
 
 echo "Using bedtools coverage to get read count and coverage over each gene..."
 
-cd ${Bedtools_dir}
-./bedtools coverage -abam ${output_dir}/${RNA_outputName}.bam -b  ${CARD_fasta}.bed > ${output_dir}/${RNA_outputName}.coverage
+${Bedtools_dir}/bedtools coverage -abam ${output_dir}/${RNA_outputName}.bam -b  ${CARD_fasta}.bed > ${output_dir}/${RNA_outputName}.coverage
 
 echo "It's the end of RNASeq Mapping Session. :) "
 else 
