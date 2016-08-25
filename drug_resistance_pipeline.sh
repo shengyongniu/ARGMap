@@ -17,36 +17,70 @@ fi
 
 # directory where source scripts are located
 sourcedir="${sourcedir}"
-echo "Source Directory: ${sourcedir}"
+if [  "${sourcedir}" ];
+then echo "sourcedir is in" ${sourcedir};
+else echo "sourcedir doesn't exist." && exit 1 
+fi
+
 # directory where input data is located
 
 CARD_dir="${CARD_dir}"
-echo "CARD Directory: ${CARD_dir}"
+if [  "${CARD_dir}" ];
+then echo "CARD_dir is in" ${CARD_dir};
+else echo "CARD_dir doesn't exist." && exit 1 
+fi
+
 CARD_fasta="${CARD_fasta}"
+if [  "${CARD_fasta}" ];
+then echo "CARD_fasta  is in" ${CARD_fasta};
+else echo "CARD_fasta doesn't exist." && exit 1 
+fi
 
 
 
 WGS_dir="${WGS_dir}"
-echo "WGS Directory: ${WGS_dir}"
+if [  "${WGS_dir}" ];
+then echo "WGS_dir  is in" ${WGS_dir};
+else echo "WGS_dir doesn't exist." && exit 1
+fi
 
 
 RNAseq_dir="${RNAseq_dir}"
-echo "RNAseq Directory: ${RNAseq_dir}"
+if [  "${RNAseq_dir}" ];
+then echo "RNAseq_dir  is in" ${RNAseq_dir};
+else echo "RNAseq_dir doesn't exist." && exit 1 
+fi
+
 
 # directory where executable tool files are located
 Bowtie2_dir="${Bowtie2_dir}"
-echo "Bowtie2 Directory: ${Bowtie2_dir}"
+if [  "${Bowtie2_dir}" ];
+then echo "Bowtie2_dir  is in" ${Bowtie2_dir};
+else echo "Bowtie2_dir doesn't exist." && exit 1 
+fi
+
 Bedtools_dir="${Bedtools_dir}"
-echo "Bedtools Directory: ${Bedtools_dir}"
+if [  "${Bedtools_dir}" ];
+then echo "Bedtools_dir  is in" ${Bedtools_dir};
+else echo "Bedtools_dir doesn't exist." && exit 1 
+fi
+
 Samtools_dir="${Samtools_dir}"
-echo "Samtools Directory: ${Samtools_dir}"
+if [  "${Samtools_dir}" ];
+then echo "Samtools_dir  is in" ${Samtools_dir};
+else echo "Samtools_dir doesn't exist." && exit 1 
+fi
+
 
 # output directory where all outputs will be stored
 output_dir="${output_dir}"
-echo "Output Directory: ${output_dir}"
+if [  "${output_dir}" ];
+then echo "output_dir  is in" ${output_dir};
+else echo "output_dir doesn't exist." && exit 1 
+fi
+
 WGS_outputName="${WGS_outputName}"
 RNA_outputName="${RNASeq_outputName}"
-
 
 
 ##############################
@@ -59,6 +93,7 @@ RNA_outputName="${RNASeq_outputName}"
 echo "Build up CARD database"
 cd ${sourcedir}
 mkdir CARD
+mkdir output
 cd CARD
 curl -O https://card.mcmaster.ca/download/0/broadstreet-v1.1.0.tar.gz
 tar -xvf broadstreet-v1.1.0.tar.gz
@@ -68,9 +103,8 @@ mv nucleotide_fasta\[protein\ homolog\ model\].fasta  nucleotide_fasta_protein_h
 ##Build Bowtie index from a set of DNA sequence
 
 echo "build Bowtie index from a set of DNA sequence"
-cd ${Bowtie2_dir}
 
-./bowtie2-build ${CARD_fasta}  ${CARD_dir}/nucleotide_fasta.ProteinHomologModel 
+${Bowtie2_dir}/bowtie2-build ${CARD_fasta}  ${CARD_dir}/nucleotide_fasta.ProteinHomologModel 
 
 
 ##2. Mapping of Metagenome Data
@@ -83,7 +117,7 @@ then
  echo "####Mapping of Metagenome Data####"
 
  echo "Mapping of Homolog Model Data"
-# cd ${Bowtie2_dir}
+ 
  ${Bowtie2_dir}/bowtie2 -x  ${CARD_dir}/nucleotide_fasta.ProteinHomologModel  -1 ${WGS_dir}/${WGS_First} -2 ${WGS_dir}/${WGS_Second}  -S ${output_dir}/${WGS_outputName}.sam
  
  echo "Converting mapping results from sam format to bam format..." 
@@ -119,7 +153,6 @@ then
 echo "####Mapping of Metatranscriptome Data####"
 
 echo "Use Bowtie2 to map RNAseq data with Hololog Model Data"
-#cd ${Bowtie2_dir}
 ${Bowtie2_dir}/bowtie2 -x  ${CARD_dir}/nucleotide_fasta.ProteinHomologModel  -1 ${RNAseq_dir}/${RNAseq_First} -2 ${RNAseq_dir}/${RNAseq_Second}  -S ${output_dir}/${RNA_outputName}.sam
 
 echo "Converting mapping results from sam format to bam format..."
