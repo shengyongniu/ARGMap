@@ -54,12 +54,19 @@ WGS and RNAseq mapping testing Tutorial
 
   In the .coverage file, first few lines look like 
 ```
-gb|AJ295238|0-1920|ARO:3000196|tet32	1284	1382	SL-HBV:H2W77ADXY160506:H2W77ADXY:2:1101:7660:79454/1	0	+	1284	1382	0,0,0	1	98,	0,	1	98	98	1.0000000
-gb|M18896|0-1920|ARO:3000190|tetO	1271	1372	SL-HBV:H2W77ADXY160506:H2W77ADXY:2:1101:7660:79454/2	1	-	1271	1372	0,0,0	1	101,	0,	1	101	101	1.0000000
+gb|AJ295238|0-1920|ARO:3000196|tet32    0       1919    273     1918    1919    0.9994789
+gb|EU434751|658-2578|ARO:3000194|tetW   0       1919    1063    1919    1919    1.0000000
+gb|GQ342996|797-1793|ARO:3003097|CfxA6  0       996     1084    996     996     1.0000000
+gb|M18896|0-1920|ARO:3000190|tetO       0       1919    814     1919    1919    1.0000000
+gb|Z21523|0-1974|ARO:3000191|tetQ       0       1973    1372    1973    1973    1.0000000
 ```
 
   * columns:
     1. id of antibiotic resistant gene
-    2. 
-    3. 
+    2. start position of the gene (bed format)
+    3. end position of the gene (bed format)
+    4. number of sequencing reads mapped to the gene
+    5. number of nucleotides of the gene mapped by sequencing reads
+    6. end position of the gene (bed format)
+    7. fraction of the gene covered by sequencing reads
 
