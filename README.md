@@ -51,11 +51,11 @@ WGS and RNAseq mapping testing Tutorial
 6. Results Interpretation
   
   In output file directory, you could find .sam, .bam and .coverage file for WGS and RNAseq files. In our .coverage file, the columns are .......... 
+
   In the .coverage file, first few lines look like 
-
-*gb|AJ295238|0-1920|ARO:3000196|tet32	1284	1382	SL-HBV:H2W77ADXY160506:H2W77ADXY:2:1101:7660:79454/1	0	+	1284	1382	0,0,0	1	98,	0,	1	98	98	1.0000000*
-
-  gb|M18896|0-1920|ARO:3000190|tetO	1271	1372	SL-HBV:H2W77ADXY160506:H2W77ADXY:2:1101:7660:79454/2	1	-	1271	1372	0,0,0	1	101,	0,	1	101	101	1.0000000*
-
+```
+gb|AJ295238|0-1920|ARO:3000196|tet32	1284	1382	SL-HBV:H2W77ADXY160506:H2W77ADXY:2:1101:7660:79454/1	0	+	1284	1382	0,0,0	1	98,	0,	1	98	98	1.0000000
+gb|M18896|0-1920|ARO:3000190|tetO	1271	1372	SL-HBV:H2W77ADXY160506:H2W77ADXY:2:1101:7660:79454/2	1	-	1271	1372	0,0,0	1	101,	0,	1	101	101	1.0000000
+```
 
 
