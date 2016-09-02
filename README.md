@@ -61,12 +61,12 @@ gb|M18896|0-1920|ARO:3000190|tetO       0       1919    814     1919    1919    
 gb|Z21523|0-1974|ARO:3000191|tetQ       0       1973    1372    1973    1973    1.0000000
 ```
 
-  * columns:
-    1. id of antibiotic resistant gene
-    2. start position of the gene (bed format)
-    3. end position of the gene (bed format)
-    4. number of sequencing reads mapped to the gene
-    5. number of nucleotides of the gene mapped by sequencing reads
-    6. end position of the gene (bed format)
-    7. fraction of the gene covered by sequencing reads
+######Descripttion of columns:
+  1. id of antibiotic resistant gene
+  2. start position of the gene (bed format)
+  3. end position of the gene (bed format)
+  4. number of sequencing reads mapped to the gene
+  5. number of nucleotides of the gene mapped by sequencing reads
+  6. end position of the gene (bed format)
+  7. fraction of the gene covered by sequencing reads
 
