@@ -10,7 +10,7 @@ WGS and RNAseq mapping testing Tutorial
   
   Please check: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#obtaining-bowtie-2
   
-  Installation of Bedtools 2.25.0
+  Installation of Bedtools 2.16.1
 
   Please check: http://bedtools.readthedocs.io/en/latest/content/installation.html
 
