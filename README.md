@@ -12,7 +12,7 @@ WGS and RNAseq mapping testing Tutorial
   
   Installation of Bedtools 2.16.1
 
-  Please check: http://bedtools.readthedocs.io/en/latest/content/installation.html
+  Please check: https://launchpad.net/ubuntu/+source/bedtools/2.16.1-1
 
   Installation of Samtools 1.3.1
 
