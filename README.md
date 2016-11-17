@@ -50,7 +50,6 @@ WGS and RNAseq mapping testing Tutorial
 
 6. Results Interpretation
   
-The columns in order are ID of antibiotic resistant gene, start position of the gene (BED format), end position of the gene (BED format), number of sequencing reads mapped to the gene, number of nucleotides of the gene mapped by sequencing reads, end position of the gene (BED format) and fraction of the gene covered by sequencing reads. 
 
   In the .coverage file, first few lines look like 
 ```
