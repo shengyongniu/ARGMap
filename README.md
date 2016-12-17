@@ -53,19 +53,25 @@ WGS and RNAseq mapping testing Tutorial
 
   In the .coverage file, first few lines look like 
 ```
-gb|AJ295238|0-1920|ARO:3000196|tet32    0       1919    273     1918    1919    0.9994789
-gb|EU434751|658-2578|ARO:3000194|tetW   0       1919    1063    1919    1919    1.0000000
-gb|GQ342996|797-1793|ARO:3003097|CfxA6  0       996     1084    996     996     1.0000000
-gb|M18896|0-1920|ARO:3000190|tetO       0       1919    814     1919    1919    1.0000000
-gb|Z21523|0-1974|ARO:3000191|tetQ       0       1973    1372    1973    1973    1.0000000
+gb|A15097|382-1642|ARO:3000363|EreB 0 1259 0 0 0.0000000 0 0 0.0000000
+gb|AB008454|153-1290|ARO:3002493|SRT-1 0 1136 0 0 0.0000000 0 0 0.0000000
+gb|AB010417|0-741|ARO:3002194|IMP-3 0 740 0 0 0.0000000 0 0 0.0000000
+gb|AB014481|0-735|ARO:3002825|ErmY 0 734 0 0 0.0000000 0 0 0.0000000
+gb|AB015853|1330-4471|ARO:3003033|mexY 0 3141 0 0 0.0000000 0 0 0.0000000
+gb|AB015853|145-1315|ARO:3003034|mexX 0 1170 0 0 0.0000000 0 0 0.0000000
+gb|AB016934|6575-7376|ARO:3000423|FomA 0 801 0 0 0.0000000 0 0 0.0000000
+gb|AB016934|7388-8381|ARO:3000449|FomB 0 993 0 0 0.0000000 0 0 0.0000000
+
 ```
 
 ######Description of columns:
   1. id of antibiotic resistant gene
   2. start position of the gene (bed format)
   3. end position of the gene (bed format)
-  4. number of sequencing reads mapped to the gene
-  5. number of nucleotides of the gene mapped by sequencing reads
-  6. end position of the gene (bed format)
-  7. fraction of the gene covered by sequencing reads
+  4. (WGS)number of sequencing reads mapped to the gene
+  5. (WGS)number of nucleotides of the gene mapped by sequencing reads
+  6. (WGS)fraction of the gene covered by sequencing reads
+  7. (RNA)number of sequencing reads mapped to the gene
+  8. (RNA)number of nucleotides of the gene mapped by sequencing reads
+  9. (RNA)fraction of the gene covered by sequencing reads
 
