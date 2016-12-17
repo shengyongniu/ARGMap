@@ -172,3 +172,13 @@ echo "Cannot Read Metatranscriptome Data, skip this session."
 
 fi
 
+if [[  -d "${WGS_dir}" && -d "${RNA_dir}"  ]]; 
+
+
+then
+
+echo "Detect WGS and RNA gene mapping coverage results."
+echo "Merging WGS and RNA coverage results..."
+join -j 1 -o 1.1,1.2,1.3,1.4,1.5,1.7,2.4,2.5,2.7 <(sort -k1 ${output_dir}/${WGS_outputName}.coverage) <(sort -k1 ${output_dir}/${RNA_outputName}.coverage) > ${output_dir}/${WGS_outputName}_${RNA_outputName}.coverage
+echo "It's the end of WGS and RNASeq Mapping Session. :) "
+fi
