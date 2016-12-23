@@ -53,18 +53,20 @@ WGS and RNAseq mapping testing Tutorial
 
   In the .coverage file, first few lines look like 
 ```
-gb|CP004067|52914-53709|ARO:3002647|APH(3')-IIIa 0 795 44 791 0.9949685 42 219 0.2754717
+gb|NC_023287|60996-61860|ARO:3002626|ANT(6)-Ia	0	863	23	507	0.5874855	20	186	0.2155272	0.869565	2.37027
 
 ```
 
 ######Description of columns:
-  1. id of antibiotic resistant gene
-  2. start position of the gene (bed format)
-  3. end position of the gene (bed format)
-  4. (WGS)number of sequencing reads mapped to the gene
-  5. (WGS)number of nucleotides of the gene mapped by sequencing reads
-  6. (WGS)fraction of the gene covered by sequencing reads
-  7. (RNA)number of sequencing reads mapped to the gene
-  8. (RNA)number of nucleotides of the gene mapped by sequencing reads
-  9. (RNA)fraction of the gene covered by sequencing reads
+1. id of antibiotic resistant gene
+2. start position of the gene (bed format)
+3. end position of the gene (bed format)
+4. (WGS)number of sequencing reads mapped to the gene
+5. (WGS)number of mapped nucleotides of the gene 
+6. (WGS)fraction of the gene covered by sequencing reads
+7. (RNA)number of sequencing reads mapped to the gene
+8. (RNA)number of mapped nucleotides of the gene
+9. (RNA)fraction of the gene covered by sequencing reads
+10. (#RNA-read/Gene length)/(#DNA-read/Gene length)
+11. (#RNA-read/RNA-coverage)/(#DNA-read/DNA-coverage)
 
