@@ -172,7 +172,7 @@ echo "Cannot Read Metatranscriptome Data, skip this session."
 
 fi
 
-if [[  -d "${WGS_dir}" && -d "${RNA_dir}"  ]]; 
+if [[  -d "${WGS_dir}" && -d "${RNAseq_dir}"  ]];
 
 
 then
@@ -180,5 +180,11 @@ then
 echo "Detect WGS and RNA gene mapping coverage results."
 echo "Merging WGS and RNA coverage results..."
 join -j 1 -o 1.1,1.2,1.3,1.4,1.5,1.7,2.4,2.5,2.7 <(sort -k1 ${output_dir}/${WGS_outputName}.coverage) <(sort -k1 ${output_dir}/${RNA_outputName}.coverage) > ${output_dir}/${WGS_outputName}_${RNA_outputName}.coverage
+awk '{if ($3 + 0 != 0 && $6 + 0 != 0 && $9 + 0 != 0) print $1 "\t" $2 "\t" $3 "\t" $4 "\t" $5 "\t" $6 "\t" $7 "\t" $8 "\t" $9 "\t" (($7 / $3) / ($4 / $3)) "\t" (($7 / $9) / ($4 / $6))}' ${output_dir}/${WGS_outputName}_${RNA_outputName}.coverage  > ${output_dir}/${WGS_outputName}_${RNA_outputName}_integrative_coverage
+rm ${output_dir}/${WGS_outputName}_${RNA_outputName}.coverage
 echo "It's the end of WGS and RNASeq Mapping Session. :) "
+else 
+
+echo "Cannot detect WGS or RNA file directory"
+
 fi
