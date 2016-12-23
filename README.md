@@ -51,7 +51,7 @@ WGS and RNAseq mapping testing Tutorial
 6. Results Interpretation
   
 
-  In the .coverage file, first few lines look like 
+  In the _integrative_coverage file, first few lines look like 
 ```
 gb|NC_023287|60996-61860|ARO:3002626|ANT(6)-Ia	0	863	23	507	0.5874855	20	186	0.2155272	0.869565	2.37027
 
