@@ -24,9 +24,9 @@ RNAseq_First="RNAseq.end1.fq.gz"
 RNAseq_Second="RNAseq.end2.fq.gz"
 
 # directory where executable tool files are located
-Bowtie2_dir="/broad/software/free/Linux/redhat_6_x86_64/pkgs/bowtie2_2.2.1/"
-Bedtools_dir="/broad/software/free/Linux/redhat_6_x86_64/pkgs/bedtools_version-2.16.1/bin/"
-Samtools_dir="/broad/software/free/Linux/redhat_6_x86_64/pkgs/samtools/samtools_1.3/bin/"
+Bowtie2_dir="/pylon2/ci4s87p/sdsubmbl/bowtie2-2.2.1"
+Bedtools_dir="/pylon2/ci4s87p/sdsubmbl/BEDTools-Version-2.16.1/bin/"
+Samtools_dir="/pylon2/ci4s87p/sdsubmbl/samtools-1.3.1/"
 
 
 
