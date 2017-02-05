@@ -4,7 +4,7 @@ Profiling Antibiotic Resistant Gene Expression with metagenome and metatranscrip
 
 WGS and RNAseq mapping testing Tutorial
 
-1. Installation of Bowtie2, Bedtools and Samtools 
+#1. Installation of Bowtie2, Bedtools and Samtools 
 
   Installation of Bowtie2 2.2.1
   
@@ -19,12 +19,12 @@ WGS and RNAseq mapping testing Tutorial
   Please check: http://www.htslib.org/download/
   
 
-2. CARD Database (The Comprehensive Antibiotic Resistance Database)
+#2. CARD Database (The Comprehensive Antibiotic Resistance Database)
   
   CARD v.1.1.0 reference database will be built up in "${sourcedir}/CARD/" by default
 
 
-3.  WGS and RNAseq Input Testing Dataset (Paired-End)
+#3.  WGS and RNAseq Input Testing Dataset (Paired-End)
 
 We uploaded the example datasets in the following FTP platform. 
 Please download the DNA and RNA testing dataset and put them in "ARGMap/example/WGS/" and "ARGMap/example/RNAseq/", respectively. 
@@ -35,7 +35,7 @@ Please download the DNA and RNA testing dataset and put them in "ARGMap/example/
 
 **Description of the testing datasets:
 
-3-A. DNA whole-genome shotgun sequencing (paired-end) example dataset
+  3-A. DNA whole-genome shotgun sequencing (paired-end) example dataset
 
 Design: Illumina sequencing of human gut metagenome via random selection
 Accession ID: SRX247394 
@@ -46,7 +46,8 @@ Download Date: 2017/1/23
 Other Information: 
 ILLUMINA (Illumina HiSeq 2000) run: 15.4M spots, 3.1G bases, 2.3Gb downloads
 
-3-B. RNA sequencing of transcriptome (paired-end) example dataset
+  3-B. RNA sequencing of transcriptome (paired-end) example dataset
+  
 Design: Illumina sequencing of human gut metagenome via random selection
 Accession ID: SRX247334 
 ID of example run: SRR769401	
@@ -56,18 +57,18 @@ Download Date: 2017/1/23
 Other Information: 
 ILLUMINA (Illumina HiSeq 2000) runs: 12.5M spots, 2.5G bases, 2.1Gb downloads
 
-4. Config File "pipeline_config.sh" Editing
+#4. Config File "pipeline_config.sh" Editing
 
   **Please edit the pathway in config file as its instruction!**
   
-5. Execution of pipeline shell script
+#5. Execution of pipeline shell script
 
   Please access to your source directory and input "./drug_resistance_pipeline.sh" then it will source the config file and execute pipeline job. 
 
 ** The output of testing datasets:
 FTP Link: http://bmbl.sdstate.edu/downloadFiles/output.zip
 
-6. Results Interpretation
+#6. Results Interpretation
   
   In the _integrative_coverage file, first few lines look like 
 ```
